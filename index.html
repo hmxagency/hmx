@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMX Agency</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/hero.css">
+    <link rel="stylesheet" href="assets/style/responsive.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="smooth-wrapper">
+        <div class="smooth-content">
+            <header>
+                <a href="#home">
+                    <div class="amblem">
+                        <img src="assets/images/logo/HMX-AMLBEM.png" alt="ajans amblemi" class="amblem">
+                    </div>
+                </a>
+
+                <!-- Hamburger Button -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav id="nav">
+                    <a href="#home">Ana Sayfa</a>
+                    <a href="#services">Hizmetlerimiz</a>
+                    <a href="#process">Metodumuz</a>
+                    <a href="#projects">Projelerimiz</a>
+                    <a href="#about-us">Hakkımızda</a>
+                    <a href="#call-us">Bize Ulaşın</a>
+                    <a href="#faq">SSS</a>
+                </nav>
+            </header>
+            <main>
+                <section class="banner" id="home">
+                    <video autoplay muted loop id="background-video">
+                        <source src="assets/images/hero/earth.mp4" type="video/mp4">
+                        Tarayıcınız video etiketini desteklemiyor.
+                    </video>
+
+                    <h2>Markanızı Dijitalde <span>Zirveye</span> Taşıyoruz.</h2>
+                    <p>Modern, hızlı ve etkili web tasarımlarıyla işinizi geleceğe taşıyın.</p>
+                    <a href="#contact">Bize Ulaşın</a>
+                </section>
+
+                <section class="service-section" id="services">
+                    <div class="container service-container">
+                        <div class="text-block">
+                            <h3>Hizmetlerimiz</h3>
+                            <h2>Dijitalde Profesyonellik</h2>
+                            <p class="feature-lead-text">
+                                Markanızın dijital dünyadaki yüzünü modern, hızlı ve kullanıcı dostu tasarımlarla
+                                güçlendiriyoruz.
+                                Profesyonel tasarım ve güncel teknolojilerle web sitenizi öne çıkarıyoruz.
+
+                            </p>
+
+                            <div class="features-text">
+                                <p>
+                                    <span class="icon"><i class="fa-solid fa-paintbrush"></i></span>
+                                    <span class="text">
+                                        <strong>UI/UX Mükemmelliği:</strong> Sitenizin tasarımını ziyaretçilerin kolayca
+                                        kullanabileceği ve göze hoş gelen şekilde hazırlıyoruz.
+                                    </span>
+                                </p>
+                                <p>
+                                    <span class="icon"><i class="fa-solid fa-mobile-screen"></i></span>
+                                    <span class="text">
+                                        <strong>Mobil Öncelik:</strong> Web siteniz telefon, tablet ve bilgisayarda
+                                        kusursuz
+                                        görünür ve sorunsuz çalışır.
+                                    </span>
+                                </p>
+                                <p>
+                                    <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    <span class="text">
+                                        <strong>SEO Hazır:</strong> Google ve diğer arama motorlarında sitenizin
+                                        bulunabilirliğini artıracak çalışmalar yapıyoruz.
+                                    </span>
+                                </p>
+                                <p>
+                                    <span class="icon"><i class="fa-solid fa-gauge"></i></span>
+                                    <span class="text">
+                                        <strong>Yüksek Performans:</strong> Hızlı yüklenme süreleri ve en üst düzey
+                                        güvenlik.
+                                    </span>
+                                </p>
+                            </div>
+
+                            <a href="#process" class="services-cta-btn">Çalışma Sürecimiz →</a>
+                        </div>
+
+                        <div class="image-block">
+                            <img src="assets/images/hero/services.jpg" alt="Web Sitesi Tasarımı Mockup">
+                        </div>
+                    </div>
+                </section>
+
+                <section id="process" class="process-section">
+                    <div class="container process-container">
+                        <canvas id="process-canvas"></canvas>
+                        <!-- Swiper Container -->
+                        <h3>Metodumuz</h3>
+                        <h2>Çalışma Adımlarımız</h2>
+                        <p class="lead-text">Başarıyı garanti altına almak için tasarlanmış şeffaf ve çevik bir yöntemle
+                            çalışıyoruz.</p>
+                        <div class="swiper myProcessSwiper">
+                            <div class="swiper-wrapper">
+
+                                <!-- 1 -->
+                                <div class="swiper-slide process-slide">
+                                    <div class="slide-content">
+                                        <span class="step-number">01</span>
+                                        <h4>
+                                            <i class="fas fa-search"></i> <!-- Keşif / analiz ikonu -->
+                                            Keşif ve Analiz
+                                        </h4>
+                                        <p>Projenizin hedeflerini, sektörünüzü ve rakiplerinizi detaylı şekilde analiz
+                                            ederek,
+                                            stratejik yol haritanızı oluşturuyoruz. Böylece ilk adımdan itibaren doğru
+                                            yönlendirme sağlıyoruz.</p>
+                                    </div>
+                                </div>
+
+                                <!-- 2 -->
+                                <div class="swiper-slide process-slide">
+                                    <div class="slide-content">
+                                        <span class="step-number">02</span>
+                                        <h4>
+                                            <i class="fas fa-pencil-ruler"></i> <!-- UI/UX tasarım ikonu -->
+                                            UI / UX Tasarım
+                                        </h4>
+                                        <p>Kullanıcı odaklı tasarım anlayışımızla, markanızın kimliğine uygun modern ve
+                                            estetik
+                                            arayüzler tasarlıyoruz. Kullanıcı deneyimini en üst düzeye çıkarıyoruz.</p>
+                                    </div>
+                                </div>
+
+                                <!-- 3 -->
+                                <div class="swiper-slide process-slide">
+                                    <div class="slide-content">
+                                        <span class="step-number">03</span>
+                                        <h4>
+                                            <i class="fas fa-code"></i> <!-- Kodlama ikonu -->
+                                            Geliştirme & Kodlama
+                                        </h4>
+                                        <p>Onaylanan tasarımı hızlı, güvenli ve SEO uyumlu kodlarla hayata geçiriyoruz.
+                                            Mobil
+                                            cihazlara ve tarayıcı uyumluluğuna maksimum özen gösteriyoruz.</p>
+                                    </div>
+                                </div>
+
+                                <!-- 4 -->
+                                <div class="swiper-slide process-slide">
+                                    <div class="slide-content">
+                                        <span class="step-number">04</span>
+                                        <h4>
+                                            <i class="fas fa-check-circle"></i> <!-- Test & kalite ikonu -->
+                                            Test & Kalite Kontrol
+                                        </h4>
+                                        <p>Tüm cihaz ve tarayıcılarda sorunsuz çalıştığından emin olmak için kapsamlı
+                                            performans
+                                            ve güvenlik testleri uyguluyoruz. Her şeyin kusursuz olduğundan emin
+                                            olabilirsiniz.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- 5 -->
+                                <div class="swiper-slide process-slide">
+                                    <div class="slide-content">
+                                        <span class="step-number">05</span>
+                                        <h4>
+                                            <i class="fas fa-rocket"></i> <!-- Lansman ikonu -->
+                                            Lansman & Destek
+                                        </h4>
+                                        <p>Projenizi yayına alıyor, gerekli optimizasyonları yapıyoruz. Sonrasında
+                                            teknik destek
+                                            ve bakım hizmetlerimizle her zaman yanınızdayız.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Navigation -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+
+                            <!-- Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="tech-values" class="tech-values-section">
+                    <div class="container tech-values-container">
+                        <h3>Teknolojik Gücümüz</h3>
+                        <p class="lead-text">
+                            Kalite, hız ve yenilikçi teknolojileri birleştirerek markanızı dijitalde farklılaştırıyoruz.
+                        </p>
+                        <div class="tech-slider-box">
+                            <div class="tech-grid">
+                                <!-- Birinci Set (16 öğe) -->
+                                <div class="tech-item"><i class="fab fa-react"></i><span>React</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-node"></i><span>Node.js</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-cube"></i><span>Three.js</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-fire"></i><span>Next.js</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-mountain"></i><span>Tailwind</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-pen-ruler"></i><span>Figma</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-database"></i><span>Firebase</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-terminal"></i><span>VS Code</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-sass"></i><span>Sass</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-cogs"></i><span>Webpack</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-hand-fist"></i><span>Vite</span></div>
+
+                                <!-- Tekrar Set (16 öğe) -->
+                                <div class="tech-item"><i class="fab fa-react"></i><span>React</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-node"></i><span>Node.js</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-cube"></i><span>Three.js</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-fire"></i><span>Next.js</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-mountain"></i><span>Tailwind</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-pen-ruler"></i><span>Figma</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-database"></i><span>Firebase</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-terminal"></i><span>VS Code</span></div>
+                                <div class="tech-item"><i class="fa-brands fa-sass"></i><span>Sass</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-cogs"></i><span>Webpack</span></div>
+                                <div class="tech-item"><i class="fa-solid fa-hand-fist"></i><span>Vite</span></div>
+                            </div>
+                        </div>
+                </section>
+
+                <section id="projects" class="projects-section">
+                    <div class="container projects-container">
+                        <canvas id="projects-canvas"></canvas>
+                        <h3>Portföy</h3>
+                        <h2>Modern Web Çözümleri</h2>
+                        <p class="lead-text">Modern, premium ve kullanıcı odaklı web deneyimlerinden bazı örnekler.</p>
+                        <div class="projects-grid">
+                            <a href="https://zhm03.github.io/Royal-Rise/" target="_blank" class="projects-card">
+                                <div class="projects-image">
+                                    <img src="assets/images/royal-rise.png" alt="Royal Rise">
+                                </div>
+                                <div class="projects-info">
+                                    <h3>Royal Rise</h3>
+                                </div>
+                            </a>
+
+                            <a href="https://zhm03.github.io/Cafe-Lumire/" target="_blank" class="projects-card">
+                                <div class="projects-image">
+                                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="Cafe Lumire">
+                                </div>
+                                <div class="projects-info">
+                                    <h3>Cafe Lumire</h3>
+                                </div>
+                            </a>
+                            <a href="https://zhm03.github.io/petello" target="_blank" class="projects-card">
+                                <div class="projects-image">
+                                    <img src="assets/images/petello.jpg" alt="Petello">
+                                </div>
+                                <div class="projects-info">
+                                    <h3>Petello</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about-us" class="about-us-section">
+                    <div class="container about-us-container">
+
+                        <div class="about-us-columns">
+                            <div class="about-left">
+                                <h3>HMX Agency</h3>
+                                <h2>Dijitali Yeniden Tasarlıyoruz.</h2>
+
+
+                                <div class="about-content">
+                                    <p><strong>HMX Agency,</strong> bir web tasarım stüdyosundan çok daha fazlasıdır.
+                                        Biz,
+                                        sıradan
+                                        dijital varlıkları
+                                        <strong>büyümeyi tetikleyen sofistike platformlara</strong> dönüştürme
+                                        misyonuyla
+                                        kurulmuş,
+                                        seçkin bir inovasyon laboratuvarıyız.
+                                    </p>
+                                </div>
+
+                                <div class="about-value-prop">
+                                    <p class="lead-text">Kurulduğumuz günden bu yana, yalnızca estetik değil,
+                                        <strong>ölçeklenebilir
+                                            sonuçlar</strong> üreten çözümlere odaklandık. Çalışmalarımızda mükemmellik,
+                                        bir
+                                        hedef
+                                        değil, bir standarttır.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="about-right">
+                                <div class="about-standards-timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-content">
+                                            <i class="icon-strategy"></i>
+                                            <h4>Stratejik Mimari</h4>
+                                            <p>Tasarımı, pazarlama ve iş hedeflerinizi kesiştiren sofistike bir mimari
+                                                üzerine
+                                                inşa
+                                                ederiz.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item">
+                                        <div class="timeline-content">
+                                            <i class="icon-innovation"></i>
+                                            <h4>UX Odaklı İnovasyon</h4>
+                                            <p>Kullanıcı yolculuğunu maksimum dönüşüm ve müşteri memnuniyeti için
+                                                yeniden
+                                                tanımlarız.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item">
+                                        <div class="timeline-content">
+                                            <i class="icon-transparency"></i>
+                                            <h4>Şeffaf İş Ortaklığı</h4>
+                                            <p>Projenin her aşamasında net iletişimle birinci sınıf bir iş ortağı
+                                                deneyimi
+                                                sunarız.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="call-us" class="call-us-section">
+                    <div class="container call-us-container">
+
+                        <h3>Harekete Geçin</h3>
+                        <p class="lead-text">
+                            Dijital dünyada markanızı bir adım öne taşımak için şimdi bizimle iletişime geçin!
+                        </p>
+                        <div class="contact-buttons">
+                            <a href="https://wa.me/905537161958" target="_blank" class="cta-btn whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="https://www.instagram.com/hmx.agency" target="_blank" class="cta-btn instagram">
+                                <i class="fa-brands fa-instagram"></i> Instagram
+                            </a>
+                            <a href="mailto:hmxagency25" class="cta-btn gmail">
+                                <i class="fa-solid fa-envelope"></i> Gmail
+                            </a>
+                            <a href="tel:+905537161958" class="cta-btn phone">
+                                <i class="fa-solid fa-phone"></i> Telefon
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="faq" class="faq-section">
+                    <div class="container faq-container">
+                        <h3>Sıkça Sorulan Sorular</h3>
+                        <h2>Merak Ettiklerinizi Cevaplıyoruz</h2>
+                        <p class="lead-text">Web tasarım, geliştirme ve hizmetlerimizle ilgili sık sorulan sorulara göz
+                            atın.</p>
+
+                        <div class="faq-items">
+                            <div class="faq-item">
+                                <h4 class="faq-question">Web sitem ne kadar sürede hazır olur?</h4>
+                                <p class="faq-answer">Projenizin büyüklüğüne ve kapsamına göre genellikle 2-6 hafta
+                                    arasında
+                                    tamamlanır.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4 class="faq-question">Mobil uyumlu tasarım sunuyor musunuz?</h4>
+                                <p class="faq-answer">Evet, tüm web sitelerimiz responsive tasarım ile tüm cihazlarda
+                                    sorunsuz
+                                    çalışır.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4 class="faq-question">SEO desteği veriyor musunuz?</h4>
+                                <p class="faq-answer">Web siteniz için temel SEO optimizasyonlarını yapıyor ve Google
+                                    uyumlu
+                                    hale getiriyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 HMX Agency. Tüm Hakları Saklıdır.
+    </footer>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
+    <!-- Kendi scriptlerin -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/canvas.js"></script>
+    <script src="assets/js/animation.js"></script>
+</body>
+
+</html>

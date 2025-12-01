@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Aktif tema */
+:root {
+  /* Renk Paleti (Logodan ilham alınarak) */
+  --primary-bg: #000000;
+  --secondary-bg: #0c0c0c;
+  --third-bg: #3b8591;
+  --buton-color: #ffffff;
+  --text-light: #ffffff;
+  --text-dark: #d3d3d3;
+  --text-black: #000000;
+  --accent-blue: #00ffff;
+  --accent-pink: #ff00ff;
+
+  /* Gölge Efektleri (Dijital parlamayı taklit etmek için) */
+  --shadow-glow-blue: 0 0 10px rgba(0, 255, 255, 0.6);
+  --shadow-glow-pink: 0 0 10px rgba(255, 0, 255, 0.6);
+}
+
+/* ---------------------------------------------------
+   FONT FACE DOSYALARI
+   --------------------------------------------------- */
+@font-face {
+  font-family: "SkModernist";
+  src: url("assets/fonts/Sk-Modernist-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SkModernist";
+  src: url("assets/fonts/Sk-Modernist-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SkModernistMono";
+  src: url("assets/fonts/Sk-Modernist-Mono.otf") format("opentype");
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--primary-bg);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========================================================
+   1) HEADER BÖLÜMÜ
+   ========================================================= */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 50px;
+  background-color: var(--primary-bg);
+  position: relative; /* sticky veya fixed kullanma */
+  top: 0;
+  z-index: 2000;
+  border-bottom: 1px solid var(--third-bg);
+}
+
+.amblem {
+  display: flex;
+  flex-direction: row;
+  width: 80px;
+  height: 80px;
+}
+
+header h1 {
+  margin-top: 20px;
+  margin-left: 8px;
+  color: var(--text-light);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin-left: 25px;
+  font-weight: 400;
+  color: var(--text-light);
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: var(--accent-pink);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent-blue);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ============================
+   HAMBURGER MENU
+============================ */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 32px;
+  height: 3px;
+  background: var(--accent-blue);
+  border-radius: 3px;
+  transition: 0.3s ease;
+  box-shadow: var(--shadow-glow-blue);
+}
+
+/* Animasyon */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ============================
+   GLOBAL 
+============================ */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  /* padding: min=30px, fluid=8vw, max=100px */
+  padding: clamp(30px, 8vw, 100px);
+  box-sizing: border-box;
+}
+
+section {
+  /* min=30px, mid=6vw, max=60px */
+  padding: clamp(30px, 6vw, 60px) 0;
+  width: 100%;
+}
+
+/* === Başlıklar === */
+
+section h2 {
+  /* min=28px, mid=4vw, max=44px */
+  font-size: clamp(28px, 4vw, 38px);
+  margin-bottom: clamp(15px, 2vw, 20px);
+  color: var(--text-light);
+  font-family: "Orbitron", sans-serif;
+}
+
+section h2 span {
+  /* min=32px, mid=4.5vw, max=48px */
+  font-size: clamp(32px, 4.5vw, 48px);
+  color: var(--text-light);
+  font-family: "Orbitron", sans-serif;
+}
+
+section h3 {
+  /* min=18px, mid=2.5vw, max=24px */
+  font-size: clamp(18px, 2.5vw, 24px);
+  margin-bottom: clamp(15px, 2vw, 20px);
+  color: var(--accent-blue);
+  text-align: left;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+}
+
+/* === Paragraflar === */
+
+section p {
+  /* min=16px, mid=2vw, max=20px */
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* === Lead Text === */
+
+.lead-text {
+  /* min=18px, mid=2.5vw, max=24px */
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 300;
+  color: var(--text-light);
+  border-left: 3px solid var(--accent-pink);
+
+  /* min=15px, mid=2vw, max=20px */
+  padding-left: clamp(15px, 2vw, 20px);
+
+  line-height: 1.4;
+
+  /* min=30px, mid=4vw, max=50px */
+  margin-bottom: clamp(30px, 4vw, 50px);
+}
+
+/* =========================================================
+   ) FOOTER
+   ========================================================= */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: var(--main-bg);
+  color: var(--text-light);
+  border-top: 1px solid var(--third-bg);
+}
+
+/* =========================================================
+   ) CANVAS
+   ========================================================= */
+
+#projects-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* İçeriğin arkasında kalması için */
+}
+
+#process-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* İçeriğin arkasında kalması için */
+}
