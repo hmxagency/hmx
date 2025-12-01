@@ -1,39 +1,3 @@
-//===================== Kaydırma Animasyonu
-// GSAP eklentilerini kaydet
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-let smoother;
-
-if (window.innerWidth > 768) {
-  smoother = ScrollSmoother.create({
-    wrapper: ".smooth-wrapper",
-    content: ".smooth-content",
-    smooth: 1,
-    effects: true,
-    smoothTouch: 0.1,
-    speed: 1.5,
-  });
-
-  // HEADER STICKY
-  ScrollTrigger.create({
-    trigger: ".smooth-content",
-    start: "top top",
-    end: "bottom bottom",
-    pin: "header",
-    pinSpacing: false,
-  });
-
-  // NAV anchor tıklamasını GSAP ile çözüyoruz
-  document.querySelectorAll("nav a").forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      const target = link.getAttribute("href");
-      smoother.scrollTo(target, true, "top top");
-    });
-  });
-}
-
 // ==================== Hamburger =======================
 
 const hamburger = document.getElementById("hamburger");
@@ -150,3 +114,5 @@ faqItems.forEach((item) => {
     item.classList.toggle("active");
   });
 });
+
+// ========================

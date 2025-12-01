@@ -22,6 +22,12 @@
   text-align: center;
   color: var(--text-light);
   padding: 0 20px;
+  perspective: 1200px;
+  perspective-origin: center;
+}
+
+.banner-amblem {
+  width: 200px;
 }
 
 /* Overlay */
@@ -57,22 +63,6 @@
   color: var(--text-light);
   max-width: 700px;
   position: relative;
-}
-
-/* ====== Banner Buton ====== */
-.banner a {
-  padding: 14px 35px;
-  background-color: var(--buton-color);
-  color: var(--text-black);
-  font-weight: bold;
-  border-radius: 22px;
-  transition: 0.3s;
-  position: relative;
-  font-size: clamp(14px, 2vw, 18px);
-}
-
-.banner a:hover {
-  transform: translateY(-3px);
 }
 
 /* =========================================================
@@ -184,8 +174,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  animation: fadeInRight 1s ease forwards;
+  transform: none;
   margin: auto 0;
 }
 
@@ -514,7 +503,7 @@
   position: relative;
 }
 
-.projects-info h3 {
+.projects-info p {
   color: var(--text-light);
   font-size: clamp(16px, 2vw, 22px);
   text-align: center;
@@ -538,6 +527,22 @@
   height: 100%;
   background: linear-gradient(to bottom, #00ffff, #ff00ff);
   border-radius: 100px;
+}
+
+.about-lead-text {
+  /* min=18px, mid=2.5vw, max=24px */
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 300;
+  color: var(--text-light);
+  border-left: 3px solid var(--accent-pink);
+
+  /* min=15px, mid=2vw, max=20px */
+  padding-left: clamp(15px, 2vw, 20px);
+
+  line-height: 1.4;
+
+  /* min=30px, mid=4vw, max=50px */
+  margin-bottom: clamp(30px, 4vw, 50px);
 }
 
 /* =========================== */

@@ -45,6 +45,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
+  cursor: none; /* standart imleci gizle */
 }
 
 body {
@@ -61,15 +62,22 @@ a {
    ========================================================= */
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 8px 50px;
   background-color: var(--primary-bg);
-  position: relative; /* sticky veya fixed kullanma */
-  top: 0;
-  z-index: 2000;
   border-bottom: 1px solid var(--third-bg);
+
+  transform: translateZ(0); /* ScrollSmoother fix */
+  will-change: transform; /* daha stabil */
 }
 
 .amblem {
@@ -77,15 +85,6 @@ header {
   flex-direction: row;
   width: 80px;
   height: 80px;
-}
-
-header h1 {
-  margin-top: 20px;
-  margin-left: 8px;
-  color: var(--text-light);
-  font-size: 22px;
-  font-weight: 400;
-  letter-spacing: 1px;
 }
 
 nav a {
@@ -176,6 +175,14 @@ section h2 {
   margin-bottom: clamp(15px, 2vw, 20px);
   color: var(--text-light);
   font-family: "Orbitron", sans-serif;
+  mix-blend-mode: difference; /* renk ters çevirme efekti */
+}
+
+section h1 {
+  /* min=32px, mid=4.5vw, max=48px */
+  font-size: clamp(32px, 4.5vw, 48px);
+  color: var(--text-light);
+  font-family: "Orbitron", sans-serif;
 }
 
 section h2 span {
@@ -234,6 +241,25 @@ footer {
   border-top: 1px solid var(--third-bg);
 }
 
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: transform 0.25s ease-out, background 0.25s ease-out;
+  mix-blend-mode: difference;
+  background: white;
+  z-index: 9999;
+}
+
+.cursor.grow {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
 /* =========================================================
    ) CANVAS
    ========================================================= */
@@ -254,4 +280,62 @@ footer {
   width: 100%;
   height: 100%;
   z-index: 0; /* İçeriğin arkasında kalması için */
+}
+
+.banner h2,
+.banner p,
+.banner a {
+  opacity: 0;
+  transform: translateZ(200px) rotateX(75deg); /* yerde yatık + kullanıcıya yakın */
+}
+
+/* === GENEL SCROLLBAR STİLİ === */
+::-webkit-scrollbar {
+  width: 8px; /* genişlik */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-blue);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--accent-blue);
+  transition: 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-pink);
+  box-shadow: 0 0 12px var(--accent-pink);
+}
+
+.letter {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.word {
+  white-space: pre; /* kelime içi boşlukları koru */
+  vertical-align: baseline;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  text-transform: inherit; /* uppercase vs mirası koru */
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  will-change: transform, opacity;
+}
+
+.lead-word {
+  display: inline; /* orijinali bozmamak için inline */
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  white-space: normal;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
